@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Art Gallery</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #0a0a0a;
       color: #e0e0e0;
+      image-rendering: pixelated;
     }
 
     header {
@@ -26,18 +28,13 @@
       text-shadow: 0 0 10px #bf00ff;
     }
 
-    <div class="gallery">
-    <div class="box">
-        <img src="https://github.com/Aderoooo/ader.github.io/blob/main/alone%20skeletone%20upscaled.jpg?raw=true" alt="Skeleton Art">
-    </div>
-    <div class="box">
-        <img src="https://github.com/Aderoooo/ader.github.io/blob/main/anime%20girl%20pink%20upscaled.jpg?raw=true" alt="Anime Girl Pink">
-    </div>
-    <div class="box">
-        <img src="https://github.com/Aderoooo/ader.github.io/blob/main/anime%20space.webp?raw=true" alt="Anime Space">
-    </div>
-</div>
-
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .card {
@@ -59,6 +56,7 @@
       width: 100%;
       border-radius: 10px;
       height: auto;
+      image-rendering: pixelated;
     }
 
     .caption {
@@ -76,16 +74,8 @@
       border-top: 1px solid #2a0050;
       margin-top: 50px;
     }
-      /* Pixel-modern nostalgic vibe */
-    body {
-      image-rendering: pixelated;
-    }
 
-    .card img {
-      image-rendering: pixelated;
-    }
-
-    /* Subtle CRT effect */
+    /* CRT effect */
     body::before {
       content: "";
       position: fixed;
@@ -104,26 +94,29 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>ADER — DARK NOSTALGIA GALLERY</h1>
   </header>
 
   <div class="gallery">
+
     <div class="card">
-      <img src="https://placehold.co/600x800/111111/FFFFFF?text=AI+Art+1" alt="Art 1" />
-      <div class="caption">Artwork Title 1</div>
+      <img src="https://github.com/Aderoooo/ader.github.io/blob/main/alone%20skeletone%20upscaled.jpg?raw=true" alt="Skeleton Art">
+      <div class="caption">Alone Skeleton</div>
     </div>
 
     <div class="card">
-      <img src="https://placehold.co/600x800/222222/FFFFFF?text=AI+Art+2" alt="Art 2" />
-      <div class="caption">Artwork Title 2</div>
+      <img src="https://github.com/Aderoooo/ader.github.io/blob/main/anime%20girl%20pink%20upscaled.jpg?raw=true" alt="Anime Girl Pink">
+      <div class="caption">Pink Anime Girl</div>
     </div>
 
     <div class="card">
-      <img src="https://placehold.co/600x800/333333/FFFFFF?text=AI+Art+3" alt="Art 3" />
-      <div class="caption">Artwork Title 3</div>
+      <img src="https://github.com/Aderoooo/ader.github.io/blob/main/anime%20space.webp?raw=true" alt="Anime Space">
+      <div class="caption">Cosmic Anime Scene</div>
     </div>
+
   </div>
 
   <footer>
